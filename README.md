@@ -11,10 +11,10 @@ O foco principal do projeto é a **criação, implantação e disponibilização
 ### 📸 Visualização do Aplicativo  
 
 **Visão geral do dashboard**
-![Visão geral do dashboard](images/app_dashboard.png)
+![Visão geral do dashboard](images/app_dashboard.png.png)
 
 **Gráfico de dispersão – Preço vs Odômetro**
-![Gráfico de dispersão: preço vs odômetro](images/scatter_preco_odometro.png)
+![Gráfico de dispersão: preço vs odômetro](images/scatter_preco_odometro.png.png)
 
 ---
 
