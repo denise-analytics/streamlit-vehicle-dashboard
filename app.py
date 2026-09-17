@@ -6,7 +6,7 @@ import streamlit as st
 st.header("Análise de anúncios de veículos")
 
 # Ler o dataset
-df = pd.read_csv("vehicles_us.csv")
+df = pd.read_csv("data/vehicles_us.csv")
 
 # Mostrar os primeiros dados
 st.write("Visualização inicial dos dados:")

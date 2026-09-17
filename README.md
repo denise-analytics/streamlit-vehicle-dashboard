@@ -1,108 +1,170 @@
-# 🚗 Dashboard Interativo — Anúncios de Veículos Usados
+# Dashboard Interativo de Veículos Usados
 
-## 📌 Visão Geral
-Este projeto apresenta o desenvolvimento de um dashboard interativo em Streamlit para análise exploratória de anúncios de veículos usados nos Estados Unidos.
+## Visão geral
 
-O objetivo é transformar dados brutos em visualizações acessíveis, permitindo a exploração de padrões iniciais de mercado por meio de uma aplicação web pública, simulando um cenário real de entrega de produto analítico.
+Este projeto apresenta uma aplicação web desenvolvida com Streamlit para exploração de anúncios de veículos usados nos Estados Unidos.
 
----
+O dashboard transforma os dados dos anúncios em visualizações interativas, permitindo analisar a distribuição dos preços e a relação entre preço e quilometragem diretamente pelo navegador.
 
-## 📸 Visualização do Aplicativo
+## Aplicação on-line
 
-**Visão geral do dashboard**
+A aplicação está disponível em:
+
+[**Acessar o dashboard de veículos usados**](https://sprint5-streamlit.onrender.com/)
+
+> A aplicação utiliza hospedagem gratuita e pode levar alguns segundos para iniciar após períodos de inatividade.
+
+## Visualização do aplicativo
+
+### Visão geral
+
 ![Visão geral do dashboard](images/dashboard_app.png)
 
-**Gráfico de dispersão — Preço vs Quilometragem**
-![Gráfico de dispersão](images/scatter_price_odometer.png)
+### Preço e quilometragem
 
----
+![Gráfico de dispersão entre preço e quilometragem](images/scatter_price_odometer.png)
 
-## 🎯 Objetivo do Projeto
-- Desenvolver um aplicativo web interativo para exploração de dados  
-- Analisar a distribuição de preços e quilometragem de veículos usados  
-- Avaliar visualmente a relação entre preço e odômetro  
-- Aplicar boas práticas de desenvolvimento e deploy de aplicações de dados  
+## Objetivos
 
----
+- Desenvolver uma aplicação web interativa com Streamlit.
+- Tornar a análise acessível sem a necessidade de executar código.
+- Explorar a distribuição dos preços dos veículos.
+- Analisar visualmente a relação entre preço e quilometragem.
+- Disponibilizar a aplicação em ambiente de nuvem.
+- Demonstrar uma entrega completa, do código ao deploy.
 
-## 🗂️ Dados Utilizados
-- Dataset: `vehicles_us.csv`  
-- Tipo: anúncios de veículos usados  
-- Escopo: dados públicos utilizados em estudo de caso educacional  
+## Dados analisados
 
-Principais variáveis:
-- `price` — preço do veículo  
-- `odometer` — quilometragem  
-- `model_year` — ano do modelo  
-- `condition` — condição do veículo  
-- `fuel`, `transmission`, `type` — características adicionais  
+O conjunto `vehicles_us.csv` contém **51.525 anúncios** e **13 variáveis** relacionadas a veículos usados.
 
----
+As principais informações disponíveis são:
 
-## 🛠️ Tecnologias Utilizadas
-- Python  
-- Pandas  
-- Plotly Express  
-- Streamlit  
-- Jupyter Notebook  
-- Git & GitHub  
-- Render (deploy em nuvem)  
+| Variável | Descrição |
+|---|---|
+| `price` | Preço anunciado |
+| `model_year` | Ano do modelo |
+| `model` | Modelo do veículo |
+| `condition` | Condição declarada |
+| `cylinders` | Quantidade de cilindros |
+| `fuel` | Tipo de combustível |
+| `odometer` | Quilometragem |
+| `transmission` | Tipo de transmissão |
+| `type` | Categoria do veículo |
+| `paint_color` | Cor |
+| `is_4wd` | Indicação de tração 4x4 |
+| `date_posted` | Data de publicação |
+| `days_listed` | Tempo de permanência do anúncio |
 
----
+## Funcionalidades
 
-## 🔍 Metodologia
-- Análise exploratória inicial dos dados em Jupyter Notebook  
-- Preparação básica dos dados para visualização  
-- Desenvolvimento do dashboard interativo com Streamlit  
-- Implementação de gráficos interativos:
-  - Histograma de distribuição de preços  
-  - Gráfico de dispersão entre preço e quilometragem  
-- Implantação do aplicativo em ambiente de nuvem  
+A aplicação permite:
 
-📌 O foco do projeto é interatividade e visualização exploratória, não modelagem preditiva.
+- visualizar uma amostra inicial dos dados;
+- gerar um histograma interativo dos preços;
+- gerar um gráfico de dispersão entre quilometragem e preço;
+- ativar ou ocultar cada visualização por meio de caixas de seleção;
+- explorar os gráficos com os recursos interativos do Plotly.
 
----
+## Visualizações
 
-## 📊 Funcionalidades do Aplicativo
-O dashboard permite:
-- Explorar a distribuição de preços dos veículos  
-- Analisar a relação entre preço e quilometragem  
-- Interagir com visualizações por meio de caixas de seleção  
-- Acessar a análise diretamente pelo navegador, sem necessidade de código  
+### Distribuição dos preços
 
----
+O histograma permite observar como os preços anunciados se distribuem e identificar a presença de valores extremos.
 
-## 🌐 Aplicação Online
-O aplicativo está disponível publicamente no link abaixo:
+### Relação entre preço e quilometragem
 
-👉 https://sprint5-streamlit.onrender.com/
+O gráfico de dispersão permite explorar visualmente a relação entre o valor anunciado e a quilometragem registrada.
 
-> Observação: por estar hospedado em plano gratuito, o aplicativo pode levar alguns segundos para carregar após períodos de inatividade.
+## Desenvolvimento
 
----
+O projeto foi desenvolvido em quatro etapas:
 
-## 📂 Estrutura do Repositório
-sprint_streamlit
+1. exploração inicial dos dados em Jupyter Notebook;
+2. preparação da estrutura da aplicação;
+3. criação das visualizações interativas;
+4. configuração e publicação em ambiente de nuvem.
+
+## Tecnologias utilizadas
+
+- Python
+- Pandas
+- Plotly
+- Streamlit
+- Jupyter Notebook
+- Git e GitHub
+- Render
+
+## Limitações
+
+- A aplicação possui foco exploratório e não realiza previsões de preço.
+- Os gráficos utilizam os dados disponíveis sem modelagem estatística.
+- A base contém valores ausentes em algumas variáveis.
+- Valores extremos podem influenciar a escala das visualizações.
+- As relações observadas nos gráficos não representam necessariamente causalidade.
+- A versão atual não possui filtros por modelo, ano, condição ou tipo de veículo.
+
+## Possíveis melhorias
+
+- Adicionar filtros por tipo, modelo, ano e condição.
+- Criar indicadores resumidos de preço e quilometragem.
+- Permitir comparação entre categorias de veículos.
+- Aplicar tratamento específico para valores ausentes e extremos.
+- Adicionar novas visualizações e análises segmentadas.
+
+## Estrutura do repositório
+
+```text
+streamlit-vehicle-dashboard/
+├── data/
+│   └── vehicles_us.csv
+├── images/
+│   ├── dashboard_app.png
+│   └── scatter_price_odometer.png
+├── notebooks/
+│   └── EDA.ipynb
+├── .streamlit/
+│   └── config.toml
 ├── app.py
-├── vehicles_us.csv
-├── requirements.txt
+├── .gitignore
 ├── README.md
-├── images
-│ ├── dashboard_app.png
-│ └── scatter_price_odometer.png
-├── notebooks
-│ └── EDA.ipynb
-└── .streamlit
-└── config.toml
+└── requirements.txt
+```
 
----
+## Como executar localmente
 
-## ✅ Status
-Projeto concluído e implantado, com foco em visualização de dados, interatividade e entrega de aplicação analítica em produção.
+1. Clone o repositório:
 
----
+```bash
+git clone https://github.com/denise-analytics/streamlit-vehicle-dashboard.git
+```
 
-## 👩‍💻 Autora
+2. Acesse a pasta:
+
+```bash
+cd streamlit-vehicle-dashboard
+```
+
+3. Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Inicie a aplicação:
+
+```bash
+streamlit run app.py
+```
+
+5. Abra no navegador o endereço informado pelo Streamlit.
+
+## Arquivos principais
+
+- [Aplicação Streamlit](app.py)
+- [Notebook de análise exploratória](notebooks/EDA.ipynb)
+- [Base de anúncios](data/vehicles_us.csv)
+
+## Autora
+
 **Denise Duarte**  
-Analista de Dados Júnior | Python | SQL | Visualização de Dados  
-📬 Aberta a oportunidades na área de Dados
+Analista de Dados Júnior | Python | SQL | Excel | Power BI
